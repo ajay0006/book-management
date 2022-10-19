@@ -1,9 +1,9 @@
-import { configureStore} from "@reduxjs/toolkit";
+import {configureStore} from "@reduxjs/toolkit";
+import BooksReducer from "../reducers/booksReducer";
 
-const Store = () => {
-
-    return (
-        <>
-        </>
-    )
-}
+export const Store = configureStore({
+        reducer: {
+            books: BooksReducer
+        }
+    }
+)

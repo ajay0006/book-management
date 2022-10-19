@@ -16,7 +16,7 @@ const Header = () => {
                     </LinkContainer>
                 </Nav.Item>
                 <Nav.Item>
-                    <LinkContainer to="addBook">
+                    <LinkContainer to="createBook">
                         <Nav.Link> Add Book </Nav.Link>
                     </LinkContainer>
                 </Nav.Item>

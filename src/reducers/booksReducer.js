@@ -5,9 +5,11 @@ export const booksSlice = createSlice( {
     name: 'books',
     initialState:{
         loading: true,
-        books: [],
-        book: {},
-        page: ""
+        items: {
+            page: "",
+            books: []
+        },
+        book: {}
     },
     reducers:{
 
@@ -19,7 +21,7 @@ export const booksSlice = createSlice( {
             })
             .addCase(getBooks.fulfilled, (state, action) => {
                 state.loading = false
-                state.books = action.payload
+                state.items = action.payload
             })
             .addCase(getBooks.rejected, (state) => {
                 state.loading = false
